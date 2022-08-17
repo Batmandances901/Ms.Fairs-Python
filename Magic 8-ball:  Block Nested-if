@@ -1,0 +1,54 @@
+ Magic 8-ball:  Block Nested-if
+
+import random
+
+askAgain = "Y"
+while (askAgain == "Y"):
+	question = str(input("\nHurry up and ask the question "))
+	response = random.randint(1,20)
+
+	if (response == 1) :
+		print("\nMaybe")
+	elif (response == 2) :
+		print("\nBad question")
+	elif (response == 3) :
+		print("\nAsk someone else")
+	elif (response == 4) :
+		print("\nSure")
+	elif (response == 5) :
+		print("\nPlease kill me")
+	elif (response == 6) :
+		print("\nGo ask Willies 8 ball")
+	elif (response == 7) :
+		print("\nAsk your mom")
+	elif (response == 8) :
+		print("\nThis is reply number 8")
+	elif (response == 9) :
+		print("\nIll tell you when your older")
+	elif (response == 10) :
+		print("\nI sold my soul for this")
+	elif (response == 11) :
+		print("\nIts not yes but its also not no...")
+	elif (response == 12) :
+		print("\nSolid possabillity, sadly")
+	elif (response == 13) :
+		print("\nsure")
+	elif (response == 14) :
+		print("\n*generic appropiate cuss word*")
+	elif (response == 15) :
+		print("\nHell no")
+	elif (response == 16) :
+		print("\nYour stupid\n and no")
+	elif (response == 17) :
+		print("\nAsk someone else")
+	elif (response == 18) :
+		print("\nI wiped your harddrives")
+	elif(response == 19) :
+		print("\nyes")
+	#elif for response 3-19
+
+	else :
+		print("\nI dont know")
+
+	askAgain = str(input("Do you want to ask me another question? (Y/N) "))
+	askAgain = askAgain.upper()
