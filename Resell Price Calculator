@@ -1,0 +1,52 @@
+# calculates owner cut and shop cut for consigned item kept 3 months
+
+print("$ - $ - $ - Stuff Used In Gross Ways But You'll Buy It Any Way - $ - $ - $\n")
+
+TOTAL_MONTH = 3
+OWNERS_CUT = .60
+SHOPS_CUT = .40
+REDUCE_PRICE = .80
+
+customerName = str(input("Enter Customer's Name: "))
+
+while (customerName != "done") :
+
+	itemDescription = str(input("Enter Consigned Item: "))
+
+	while (itemDescription != "done") :
+		month = 1
+		originalPrice = float(input("Enter Original Price: $"))
+		soldPrice = originalPrice
+
+		print("\nMonth\tSale Price\tOwner's Cut\tShop's Cut")
+		
+		while (month <= TOTAL_MONTH) :
+			ownersCut = soldPrice * OWNERS_CUT
+			shopsCut = soldPrice * SHOPS_CUT
+
+			if (soldPrice < 10) :
+				print("\t", month, "\t", '$0{:,.2f}'.format(soldPrice),
+				"\t",'$0{:,.2f}'.format(ownersCut), 
+				"\t", '$0{:,.2f}'.format(shopsCut))
+				
+			elif (ownersCut , 10) :
+				print("\t", month, "\t", '${:,.2f}'.format(soldPrice),  "\t",'$0{:,.2f}'.format(ownersCut), 
+				"\t",'$0{:,.2f}'.format(shopsCut))
+
+			elif (shopsCut < 10) :
+				print("\t", month, "\t", '${:,.2f}'.format(soldPrice),
+				"\t",'${:,.2f}'.format(ownersCut), 
+				"\t",'$0{:,.2f}'.format(shopsCut))
+
+			else :
+				print("\t", month, "\t", '${:,.2f}'.format(soldPrice), 
+				"\t",'${:,.2f}'.format(ownersCut), 
+				"\t",'${:,.2f}'.format(shopsCut))
+				
+			soldPrice *= REDUCE_PRICE
+			month += 1
+
+		itemDescription = str(input("Enter Consigned Item OR 'done' To Exit: "))
+	customerName = str(input("Enter Customer's Name OR 'done' To Leave: "))
+
+print("\nThank's for using Stuff Used In Gross Ways But You'll Buy It Any Way")
