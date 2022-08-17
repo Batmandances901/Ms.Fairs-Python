@@ -1,0 +1,34 @@
+# C5.5 Using Index/Slicing to Access List Elements
+
+weapons = ['claymore', 'saber', 'broad sword', 'short sword',
+ 'gladius', 'long sword', 'naginati', 'morning star', 'glade', 'flail', 'javelin']
+
+print("Display Positive List")#starts at first ends at last
+index = 0
+for index in weapons :
+	print("~", index)
+
+print("\nDisplay Negative List")#starts at last ends at first
+for index in range(-1, -len(weapons)-1, -1) :
+	print("*", weapons[index])
+
+print("\nSlice 3-6")
+for index in weapons[2:5] :
+	print("-", index)
+
+print("\nSlice Top 5")
+for index in weapons[:5] :
+	print("~", index)
+
+print("\nSlice Last 5")
+for index in weapons[len(weapons)-5:] :
+	print("*", index)
+
+print("\nDisplay Evens")
+for index in weapons[1::2] :
+	print("-", index)
+
+print("\nDisplay Odds")
+for index in weapons[::2] :
+	print("-", index)
+
