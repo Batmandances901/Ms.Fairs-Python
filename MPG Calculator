@@ -1,0 +1,17 @@
+# Chpt 3 Mastery Program
+print("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ Car MPG  ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~")
+mpg = 0
+END = 0
+EFFICIENT_CAP = 30
+milesDriven = int(input("\nHow many miles did you drive, enter 0 to quit: "))
+
+while(milesDriven != END) :
+	gasUsed = int(input("How many gallons of gas did you use          : "))
+	carType = str(input("What kind of car was it                      : "))
+	mpg = milesDriven / gasUsed
+	if(mpg >= EFFICIENT_CAP) :
+		print(carType, "gets", round(mpg,2), "MPG **efficient**")
+	else :
+		print(carType, "gets", round(mpg,2), "MPG **non-efficient**")
+	milesDriven = int(input("How many miles did you drive, enter 0 to quit: "))
+print("Thanks for using Car MPG")
