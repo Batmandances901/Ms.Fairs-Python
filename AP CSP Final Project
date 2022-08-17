@@ -1,0 +1,58 @@
+#AP CSP Create Performance Task
+
+#The purpose of this program is to to express creative expression 
+#by making a game about raiding a tomb.
+
+#Following Python functions/procedures were used
+#random - to pick a random number/item from list
+#upper - changes user text input to uppercase letters
+
+import random
+
+tombLoot = ['Golden Skull', 'Gem Necklace', 'Fancy Spice Jar', 'Pot o Organs', 'Gold Kopesh', 'Orphan', 'Working Nokia', 'Single Cheeto', 'Toaster', 'Your Dad With Milk', 'Gun', 'Dignity', 'Mug Root Beer', 'Miniature Tomb', 'Bowling Ball', 'Plate of Spaghetti', 'Toilet Seat', 'Roll of Diamond Encrusted Toilet Paper', 'Entire Honey Glazed Ham', 'Cancer Tumor', 'Spilled Covid Cure', 'Hall Pass', 'Sleep Paralysis Demon', 'Todd', 'Future You', "Past You", 'Bee conglomerate']
+Backpack = []
+
+def displayList(Backpack) :		#Defines Function
+	print("\nYour Loot")
+	for x in Backpack :			#Loop
+		print(" •", x)
+
+def checkInput(keepGoing) :		#Defines Function
+	
+	while keepGoing != "N" :	#Loop
+		if keepGoing == "Y":	#If Statement
+			return keepGoing	#Leaves Function
+			
+		else :
+			keepGoing = str(input("Invalid try again(Y/N): "))
+			keepGoing = keepGoing.upper()
+			
+	return keepGoing			#Leaves Function
+	
+
+
+# Main Logic
+keepGoing = "Y"
+
+print("\tTomb Raiders")
+print("\nYou have entered The Tomb\n")
+		
+while (keepGoing == "Y"):		#Loop
+	keepGoing = "Y"
+	foundLoot = random.randint(0,26)
+	print("You found a", tombLoot[foundLoot])
+	Backpack.insert(0,tombLoot[foundLoot])
+	displayList(Backpack)
+	
+	keepGoing = str(input("Do you want to go farther in(Y/N): "))
+	keepGoing = keepGoing.upper()
+
+	keepGoing = checkInput(keepGoing)
+
+	
+if(keepGoing == "N") :		#If Statement
+	print("You got out safely with")
+	
+	for x in Backpack :
+		print(" •", x)
+	
