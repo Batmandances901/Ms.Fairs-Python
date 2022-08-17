@@ -1,0 +1,25 @@
+# Guess the Number program where a randome number is generated
+# and the Player enters a guess to compare against.
+print("- - - - - - - - - - Guess the Number - - - - - - - - - -")
+
+import random
+playAgain = "yes"
+
+while playAgain == "yes" :
+	comp_number = random.randint(1,10)
+
+	guess = "no"
+	while guess == "no" :
+		user_number = int(input("\nGuess the computer's number: "))
+		if comp_number > user_number :
+	 		print("\tYour guess is to low!")
+		elif comp_number < user_number :
+			print("\tYour guess is to high!")
+		else :
+			print("\n Congratulations! You Guessed the right number")
+			guess = "yes"
+
+	print("\nThe random number is ", comp_number)
+	playAgain = str(input("\nDo you want to play again? (yes/no)"))
+
+print("\nThanks for playing Guess the Number! ")
