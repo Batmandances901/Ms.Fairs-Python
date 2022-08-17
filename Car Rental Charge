@@ -1,0 +1,38 @@
+# This program should determine, and output, the rental fees for cars
+print("* * * * * *  Fair-Lee Cheap Cars  * * * * * * * * *")
+print("\n* Car Types:  1-Subcompact; 2-Compact; 3-Standard *")
+
+totalBill = 0
+STD_RATE = 65
+COM_RATE = 40
+SUB_RATE = 30
+DAYS_FOR_DISCOUNT = 7
+DISCOUNT_RATE = 0.20
+
+carType = int(input("\nEnter Car Type or 0 to exit : "))
+
+while(carType != 0) :
+	days = int(input("Enter Number of Days Rented : "))
+
+	if(carType == 1) :
+		rate = SUB_RATE
+		name = "Sub Compact"
+	elif carType == 2 :
+		rate = COM_RATE
+		name = "Compact"
+	elif carType == 3 :
+		rate = STD_RATE
+		name = "Standard"
+	else :
+		rate = 0
+		name = "invalid"
+		print("\nInvalid Car Type!")
+	
+	if(rate != 0 and days >= DAYS_FOR_DISCOUNT) :
+		rate = rate - (rate*DISCOUNT_RATE)
+		totalBill = rate*days
+	else:
+		totalBill = rate*days
+	print("\nCarType: ", name, " Days Rented: ", days, "Charge: ", '${:,.2f}'.format(totalBill))
+	carType = int(input("\nEnter Car Type or 0 to exit : "))
+print("End of Program")
