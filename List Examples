@@ -1,0 +1,67 @@
+# This program contains examples for creating Lists
+
+# 1 Create Using Square Bracket[]
+	# Create New List
+print("\nList Constructer w/ []")
+AList = ['one', 'two', 'three']
+	
+print("Display List") 
+for x in AList :
+	print(" •", x)
+	
+
+print("-"  * 20)
+# 2. Creating Using List Constructor
+print("\nList Constructor")
+BList = list(("1", "2", "3"))
+
+print("Display List") 
+
+for x in BList :
+	print(" •", x)
+
+	
+print("-"  * 20)
+# 3. Creating a list of mixed items
+print("\nList Mixed")
+mix = ["A", "B", "C"]  # this isn't a mix of data types! - strings & numerics -8
+
+print("Display List") 
+
+for x in mix :
+	print(" •", x)
+
+
+print("-"  * 20)
+
+# 4. Creating an empty list with []
+print("\nEmpty List")
+
+none = []
+
+print("Display List")
+
+for x in none :
+	print(" •", x)
+
+	
+print("-"  * 20)
+# 5. Creating an empty list with list()
+print("\nEmpty List With A List")
+
+empty = ()
+
+print("Display List")
+
+for x in empty :
+	print(" •", x)
+
+	
+print("-"  * 20)
+# 6. Find the length of All lists
+print("\nFind Length of Lists")
+print("AList length:", len(AList))
+print("BList length:", len(BList))
+print("mix length:", len(mix))
+print("none length:", len(none))
+print("empty length:", len(empty))
