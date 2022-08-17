@@ -1,0 +1,28 @@
+# C5.2 Shopping List Program
+# What is purpose of program
+
+print("- - - - - - - - Shopping List - - - - - - - - - ")#title
+
+def displayList(shoppingList) :
+	print("\n ~ ~ Final Shopping List ~ ~")
+	for item in shoppingList :   #iteration
+		print("\t-", item)
+
+shoppingList = [] 	#creates empty list
+
+storeName = str(input("\nEnter name of store you plan to visit: "))     
+#camel case variable and interactive part
+
+print("\nEnter items needed OR 'done' when finished")
+done = 'N'
+while done != 'Y' :      #iteration
+	item = str(input("\t* "))
+
+	if item == "done" :
+		done = 'Y'
+	else :
+		shoppingList.append(item)
+
+displayList(shoppingList)   #calls function
+
+print("\nTime to go shopping at", storeName)
