@@ -1,0 +1,39 @@
+# For Loop Examples
+
+#Initialize a List with 10 items:
+breadTypes = ['Sour Dough', 'Quick Bread', 'Cornbread', 'Yeast Bread',
+'Brioche', 'Challah', 'Focaccia', 'Soft Rolls', 'Wheat Bread', 'Rye']
+
+
+#Print the contents of the List
+for bread in breadTypes :
+	print("🍞", bread)
+
+
+
+#Print the letters in one item horizontally 
+print("\n")
+for letter in "BreadGood" :
+	print("🥐", letter, end='')
+
+
+#Print the list up to the 6th item
+print("\n")
+for bread in breadTypes :
+	if bread == "Focaccia" :
+		break
+	print("🥖", bread)
+#Print the list leaving out the 1 item
+print("\n")
+for bread in breadTypes :
+	if bread == "Challah" :
+		continue
+	print("🥯", bread)
+
+
+#Print the list with an 'End' message (using else)
+print("\n")
+for bread in breadTypes :
+	print("🍞", bread)
+else:
+	print("\nYou now have a yeast infection")
