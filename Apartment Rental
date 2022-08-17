@@ -1,0 +1,32 @@
+# This program calculates  a rental agent's commission at an apartment complex. 
+COMMISSION_3 = 100
+COMMISSION_2 = 75
+COMMISSION_1 = 55
+COMMISSION_0 = 30
+QUIT = 99
+
+print("* * * * * *  Rental Agent's Commission Report * * * * * * * *")
+salesPersonID = int(input("Enter salesperson ID or '99' to exit: "))
+
+while(salesPersonID != QUIT) :
+	salesPersonName = str(input("Enter salesperson's name: "))
+	numBedrooms = int(input("Enter number of Bedrooms rented: "))
+
+	if numBedrooms == 0 :
+		commission = COMMISSION_0 
+	elif numBedrooms == 1 :
+		commission = COMMISSION_1
+	elif numBedrooms == 2 :
+		commission = COMMISSION_2
+	elif numBedrooms == 3 :
+		commission = COMMISSION_3
+
+	else :
+		commission = 0
+		print("\nInvalid Number of Bedrooms Entered")
+
+	print("\n", salesPersonName, "commission is ", '${:,.2f}'.format(commission))
+
+	salesPersonID = int(input("Enter salesperson ID or '99' to exit: "))
+
+print("\nEnd Commission Report")
