@@ -1,0 +1,25 @@
+#C4.5 For Loop Example
+
+print("~ ~ ~ ~ ~ ~ ~ ~ FOR LOOP Example ~ ~ ~ ~ ~ ~ ~")
+print("1 through 10 multiplied by 5 and by 10.")
+print("\n	Value 	Value x 5   Value x 10")
+
+for value in range(1,11):
+	valueXfive = value * 5
+	valueXten = value * 10
+	print("\t ", value, "\t ", valueXfive, "\t\t " , valueXten)
+
+
+print("\nFollowing chart made with While Loop")
+
+print("\n~ ~ ~ ~ ~ ~ ~ ~ FOR LOOP Example ~ ~ ~ ~ ~ ~ ~")
+print("1 through 10 multiplied by 5 and by 10.")
+print("\n	Value 	Value x 5   Value x 10")
+
+value = 1
+
+while value <= 10:
+	valueXfive = value * 5
+	valueXten = value * 10
+	print("\t ", value, "\t ", valueXfive, "\t\t " , valueXten)
+	value += 1
