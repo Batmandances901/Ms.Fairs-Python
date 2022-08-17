@@ -1,0 +1,45 @@
+# Display needs white space (blank lines) to make it easiter to read
+
+
+#Block Nested Ifs
+print("* * * * * Squeky Clean Dog Shit * * * * *")
+
+BATH_CHARGE = 12.00
+CUT_CHARGE = 10.00
+NAIL_CHARGE = 7.00
+total = 0
+totalBill = 0
+QUIT = "exit" 
+
+customerName = str(input("Enter customer name: "))
+dogName = str(input("Enter dogs name    : "))
+
+while (dogName != QUIT):
+	print("~ ~ ~ ~ ~ ~ Services ~ ~ ~ ~ ~ ~")
+	print("1-Bath", "\t2-Bath & Cut")
+	print("3-Bath & Nails", "\t4-All Services")
+
+	servicePrompt = "What service does " + dogName + " need today?"
+	service = int(input(servicePrompt))
+
+	if service == 1 :
+		total = BATH_CHARGE
+	elif service == 2 :
+		total = BATH_CHARGE + CUT_CHARGE
+	elif service == 3 :
+		total = BATH_CHARGE + NAIL_CHARGE
+	elif service == 4 :
+		total = BATH_CHARGE + CUT_CHARGE + NAIL_CHARGE
+	else :
+		total = 0
+
+	if(total > 0):
+		print("Total service charges for", dogName, "are", '${:,.2f}'.format(total))
+		totalBill = totalBill + total
+	else :
+		print("Service selection entered was invalid")
+	
+	dogName = str(input("Enter your dogs name OR 'exit' to get your total bill: "))
+
+print("Total grooming charges for", customerName, "is", '${:,.2f}'.format(totalBill))
+print("Thank you for using Squeky Clean Dog Shit")
