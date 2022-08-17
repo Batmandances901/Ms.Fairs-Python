@@ -1,0 +1,26 @@
+# C3.1 Program displays employee net pay values.
+print("- - - - Your Going Into Debt Co. - - - -")
+print("Enter employee name OR 'end' to quit: ")
+
+END_WORD = "end"
+employeeName = str(input("Employee Name: "))
+
+while(employeeName != END_WORD) :
+	TAX = 45
+	hoursWorked = int(input("Hours Worked: "))
+	payRate = float(input("Pay Rate: "))
+	grossPay = float(payRate * hoursWorked)
+	if(grossPay > TAX) :
+		netPay = grossPay - TAX
+	else :
+		netPay = grossPay
+		TAX = 0
+
+	print("Weekly Payroll For", employeeName)
+	print("\tGross Pay: ", '${:,.2f}'.format(grossPay))
+	print("\tDeduction: ", '${:,.2f}'.format(TAX))
+	print("\tNet Pay  : ",  '${:,.2f}'.format(netPay))
+	print("Enter employee name OR 'end' to quit: ")
+	employeeName = str(input("Employee Name: "))
+	
+print("Payroll Over")
