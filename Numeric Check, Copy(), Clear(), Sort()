@@ -1,0 +1,42 @@
+# C5.7 Numeric Check, Copy(), Clear(), Sort()
+
+import random   #used with random.shuffle
+
+Names = ['Bob', 'Bobby', 'Dan', 'Luke', 'Jen',
+        'Bella', 'Sleezy', 'Charles', 'Zariat', 'Simon'  ]
+
+def display(List) :
+	count = 1
+	for item in Names :
+		print(f"\t{count}.", item)
+		count += 1
+
+MyList = Names.copy()     #makes copy of list
+print(MyList)
+
+MyList.clear()            #emptys list
+print(MyList)
+
+Names.sort()
+display(list)
+
+Names.sort(reverse = True)
+display(list)
+
+random.shuffle(Names)
+print("\n")
+display(list)
+
+def numericCheck(number):
+	while (not number.isnumeric() or 
+		  int(number) > len(Names)) :
+		number = input("\nEnter a valid number")
+	else :
+		return int(number)
+
+deleteItem = (input("\nEnter number for name that gets gets ctrl alt deleted: "))
+deleteItem = int(numericCheck(deleteItem)) -1
+Names.pop(deleteItem)
+
+print("Final Names List")
+display(list)
