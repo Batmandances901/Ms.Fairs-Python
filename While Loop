@@ -1,0 +1,12 @@
+# C4.3 While Loop
+
+START_YEAR = 2015
+FACTOR = 5
+END_YEAR = 2045
+  
+year = START_YEAR
+   
+while (year <= END_YEAR):
+
+	year = year + FACTOR
+	print("Year", year)
