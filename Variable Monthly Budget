@@ -1,0 +1,16 @@
+# C1.2 Variable Monthly Budget
+
+print("~ ~ ~ ~ ~ ~ Monthly Budget ~ ~ ~ ~ ~ ~ ~")
+
+monthlyPay  = int(input("Enter your Monthly Pay      : $"))
+monthlyRent = int(input("Enter your Monthly Rent     : $ "))
+monthlyUtil = int(input("Enter your Monthly Utilities: $ "))
+monthlyFood = int(input("Enter your Monthly Groceries: $ "))
+
+expenses = monthlyRent + monthlyUtil + monthlyFood
+funMoney = monthlyPay - expenses
+
+print("- - - - - - - - - - - - - - - - - - - -")
+print("        Monthly Pay = $", monthlyPay)
+print("   Monthly Expenses = $", expenses)
+print("Discretionary Money = $", funMoney)
