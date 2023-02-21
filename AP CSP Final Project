@@ -9,7 +9,7 @@
 
 import random
 
-tombLoot = ['Golden Skull', 'Gem Necklace', 'Fancy Spice Jar', 'Pot o Organs', 'Gold Kopesh', 'Orphan', 'Working Nokia', 'Single Cheeto', 'Toaster', 'Your Dad With Milk', 'Gun', 'Dignity', 'Mug Root Beer', 'Miniature Tomb', 'Bowling Ball', 'Plate of Spaghetti', 'Toilet Seat', 'Roll of Diamond Encrusted Toilet Paper', 'Entire Honey Glazed Ham', 'Cancer Tumor', 'Spilled Covid Cure', 'Hall Pass', 'Sleep Paralysis Demon', 'Todd', 'Future You', "Past You", 'Bee conglomerate']
+tombLoot = ['Golden Skull', 'Gem Necklace', 'Fancy Spice Jar', 'Pot o Organs', 'Gold Kopesh', 'Working Nokia', 'Single Cheeto', 'Toaster', 'Your Dad With Milk', 'Gun', 'Dignity', 'Mug Root Beer', 'Miniature Tomb', 'Bowling Ball', 'Plate of Spaghetti', 'Toilet Seat', 'Roll of Diamond Encrusted Toilet Paper', 'Entire Honey Glazed Ham', 'Cancer Tumor', 'Spilled Covid Cure', 'Hall Pass', 'Sleep Paralysis Demon', 'Todd', 'Future You', "Past You", 'Bee conglomerate']
 Backpack = []
 
 def displayList(Backpack) :		#Defines Function
